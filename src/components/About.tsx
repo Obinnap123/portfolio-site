@@ -1,6 +1,7 @@
-import React from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 const About = () => {
+  const [showPatriciaPhone, setShowPatriciaPhone] = useState(false);
   const textRevealVariants = {
     hidden: {
       opacity: 0,
@@ -90,7 +91,7 @@ const About = () => {
               <motion.span initial={{
               color: '#f8fafc'
             }} whileInView={{
-              color: '#fbbf24'
+              color: '#eab308'
             }} viewport={{
               once: true
             }} transition={{
@@ -117,6 +118,89 @@ const About = () => {
               intellectual property has established her as a respected voice in
               Nollywood's ongoing evolution.
             </motion.p>
+          </div>
+        </div>
+        {/* Collaborators & Producers */}
+        <div className="mt-20">
+          <motion.h3 initial={{
+          opacity: 0,
+          y: -8
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true,
+          amount: 0.2
+        }} transition={{
+          duration: 0.5
+        }} className="text-3xl font-semibold text-gray-100 tracking-wide mb-10">
+            Collaborators & Producers
+          </motion.h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {/* Patricia Card */}
+            <motion.div initial={{
+            opacity: 0,
+            y: 16
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            amount: 0.2
+          }} transition={{
+            duration: 0.6
+          }} className="bg-gray-800/50 border border-gray-800 rounded-xl overflow-hidden">
+              <div className="aspect-[16/10] overflow-hidden">
+                <img src="/images/patricia.jpg" alt="Portrait of Patricia Bassey" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="text-xl font-semibold text-white">Patricia Bassey</h4>
+                  <span className="text-xs px-2 py-1 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">Producer & Actor</span>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  Patricia Bassey (Aggypowers) is a producer and actor with 10+ years in film, CEO of Aggypowers Movie Productions. She has featured in The God of Shiloh, Satanic Mission, The Unknown, and produced titles including Revenge Body, ENI AIMO, and Aimoasiko. Based in Cross River, Nigeria, she brings passion and execution to every project.
+                </p>
+                <div className="flex items-center gap-3">
+                  <button onClick={() => setShowPatriciaPhone(!showPatriciaPhone)} className="text-sm text-yellow-400 hover:text-yellow-300 underline underline-offset-4 transition-colors">
+                    {showPatriciaPhone ? 'Hide number' : 'Tap to reveal'}
+                  </button>
+                  <span className="text-sm text-gray-200 font-medium select-all">
+                    {showPatriciaPhone ? '08147635077' : '0814•••5077'}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+            {/* Eke Card */}
+            <motion.div initial={{
+            opacity: 0,
+            y: 16
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            amount: 0.2
+          }} transition={{
+            duration: 0.6,
+            delay: 0.1
+          }} className="bg-gray-800/50 border border-gray-800 rounded-xl overflow-hidden">
+              <div className="aspect-[16/10] overflow-hidden">
+                <img src="/images/eke.jpg" alt="Portrait of Eke Ume" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="text-xl font-semibold text-white">Eke Ume</h4>
+                  <span className="text-xs px-2 py-1 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">Producer & Logistics</span>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  Eke Ume is a producer and logistics expert with a decade of hands‑on experience, bridging creative storytelling with seamless production operations. From multi‑location shoots to end‑to‑end producing, he delivers clarity, reliability, and results across demanding sets.
+                </p>
+                <a href="https://eke-portfolio-ruddy.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-yellow-400 hover:text-yellow-300 underline underline-offset-4 transition-colors">
+                  View Portfolio
+                </a>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

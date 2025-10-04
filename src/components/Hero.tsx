@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 const Hero = () => {
   return <section id="home" className="relative h-screen w-full overflow-hidden">

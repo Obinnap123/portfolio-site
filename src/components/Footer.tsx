@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+ 
 import { PhoneIcon, MailIcon, MapPinIcon, InstagramIcon, TwitterIcon, FacebookIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 const Footer = () => {
@@ -6,7 +6,7 @@ const Footer = () => {
     hidden: {
       opacity: 0
     },
-    visible: i => ({
+    visible: (i: number) => ({
       opacity: 1,
       transition: {
         delay: i * 0.1,
@@ -75,9 +75,9 @@ const Footer = () => {
               inspires. Based in Nigeria and reaching audiences worldwide.
             </motion.p>
             <div className="flex space-x-4">
-              {[FacebookIcon, TwitterIcon, InstagramIcon].map((Icon, i) => <motion.a key={i} custom={i} initial="hidden" whileInView="visible" viewport={{
+              {[FacebookIcon, TwitterIcon, InstagramIcon].map((Icon, i: number) => <motion.a key={i} custom={i} initial="hidden" whileInView="visible" viewport={{
               once: true
-            }} variants={staggerChildrenVariants} whileHover="hover" variants={iconVariants} href="#" className="text-gray-400 transition-colors duration-300">
+            }} variants={staggerChildrenVariants} whileHover={iconVariants.hover} href="#" className="text-gray-400 transition-colors duration-300">
                   <Icon className="h-6 w-6" />
                 </motion.a>)}
             </div>

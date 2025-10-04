@@ -19,7 +19,7 @@ const Portfolio = () => {
       opacity: 0,
       y: 30
     },
-    visible: i => ({
+    visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
