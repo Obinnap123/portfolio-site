@@ -209,10 +209,10 @@ const Footer = () => {
               text: 'Lagos, Nigeria'
             }, {
               Icon: PhoneIcon,
-              text: '+234 XXX XXX XXXX'
+              text: '+234 809 441 1005'
             }, {
               Icon: MailIcon,
-              text: 'contact@callmenglabelle.com',
+              text: 'Callmenglabelle@gmail.com',
               hover: true
             }].map((item, i) => <motion.li key={i} custom={i} initial="hidden" whileInView="visible" viewport={{
               once: true
@@ -227,7 +227,7 @@ const Footer = () => {
                   </motion.span>
                   <motion.span whileHover={item.hover ? {
                 color: '#eab308'
-              } : {}} className={`${item.hover ? 'transition-colors duration-300' : ''}`}>
+              } : {}} className={`${item.hover ? 'transition-colors duration-300 cursor-pointer' : ''}`}>
                     {item.text}
                   </motion.span>
                 </motion.li>)}
