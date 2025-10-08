@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import voltageVideo from '../assests/videos/Voltage video.mp4';
 const Portfolio = () => {
   const textVariants = {
     hidden: {
@@ -87,7 +88,7 @@ const Portfolio = () => {
         }} className="bg-gray-900 rounded-lg shadow-2xl overflow-hidden transform transition-all hover:shadow-yellow-900/20">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="relative h-96 lg:h-auto">
-                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80" alt="Voltage Movie" className="absolute inset-0 w-full h-full object-cover" />
+                <video src={voltageVideo} muted autoPlay loop playsInline className="absolute inset-0 w-full h-full object-cover"></video>
               </div>
               <div className="p-8 lg:p-12">
                 <div className="flex items-center mb-4">
